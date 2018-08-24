@@ -1,11 +1,12 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import App from './App';
-import './index.scss';
-import registerServiceWorker from './registerServiceWorker';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import "./styles/index.scss";
+interface Props {
+  welcome: string;
+}
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root') as HTMLElement
-);
-registerServiceWorker();
+const App = ({ welcome }: Props) => <div>{welcome}</div>;
+
+ReactDOM.render(<App welcome="Hello TypeScript" />, document.getElementById(
+  "root"
+) as HTMLElement);
